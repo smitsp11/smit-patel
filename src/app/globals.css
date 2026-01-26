@@ -188,6 +188,44 @@ body {
   right: -16px;
 }
 
+/* Film Sprocket Strip - Decorative edge for film strip section */
+.film-sprocket-strip {
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to right,
+    transparent,
+    transparent 20px,
+    var(--color-dark-brown) 20px,
+    var(--color-dark-brown) 24px,
+    transparent 24px,
+    transparent 60px
+  );
+  opacity: 0.3;
+}
+
+/* Film Frame Container - Individual project frame styling */
+.film-frame-container {
+  transition: transform 0.3s ease-out;
+}
+
+.film-frame-container:hover {
+  transform: translateY(-8px);
+}
+
+/* Film strip background pattern */
+.film-strip-bg {
+  background: linear-gradient(
+    to bottom,
+    var(--color-darkroom) 0%,
+    var(--color-darkroom) 8%,
+    transparent 8%,
+    transparent 92%,
+    var(--color-darkroom) 92%,
+    var(--color-darkroom) 100%
+  );
+}
+
 /* Darkroom Theme Modifier */
 .darkroom-theme {
   --bg-color: var(--color-darkroom);

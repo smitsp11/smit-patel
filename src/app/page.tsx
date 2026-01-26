@@ -2,6 +2,7 @@
 
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
+import { ProjectsSection } from "@/components/sections/ProjectsSection";
 
 export default function Home() {
   return (
@@ -13,19 +14,7 @@ export default function Home() {
       <AboutSection />
 
       {/* Projects Section - Phase 4 */}
-      <section
-        id="projects"
-        className="section-full flex items-center bg-vintage-cream"
-      >
-        <div className="section-container">
-          <h2 className="font-display text-4xl md:text-5xl text-vintage-dark-brown mb-8">
-            Projects
-          </h2>
-          <p className="font-body text-lg text-vintage-dark-brown/80">
-            Coming in Phase 4...
-          </p>
-        </div>
-      </section>
+      <ProjectsSection />
 
       {/* Experience Section - Phase 5 */}
       <section
