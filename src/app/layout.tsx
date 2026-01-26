@@ -3,6 +3,7 @@ import { Playfair_Display, Inter, Caveat } from "next/font/google";
 import "./globals.css";
 import { LenisProvider } from "@/components/providers/LenisProvider";
 import { BackgroundLayer } from "@/components/ui/BackgroundLayer";
+import { HeroProvider } from "@/contexts/HeroContext";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -23,7 +24,7 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Photography Portfolio | Software Engineer",
+  title: "Smit Patel | Software Engineer & Photographer",
   description:
     "A vintage photography-themed portfolio showcasing software engineering projects, experience, and creative work.",
   keywords: [
@@ -34,9 +35,9 @@ export const metadata: Metadata = {
     "react",
     "nextjs",
   ],
-  authors: [{ name: "Your Name" }],
+  authors: [{ name: "Smit Patel" }],
   openGraph: {
-    title: "Photography Portfolio | Software Engineer",
+    title: "Smit Patel | Software Engineer & Photographer",
     description:
       "A vintage photography-themed portfolio showcasing software engineering projects and creative work.",
     type: "website",
@@ -54,10 +55,12 @@ export default function RootLayout({
       className={`${playfair.variable} ${inter.variable} ${caveat.variable}`}
     >
       <body className="antialiased film-grain">
-        <LenisProvider>
-          <BackgroundLayer />
-          {children}
-        </LenisProvider>
+        <HeroProvider>
+          <LenisProvider>
+            <BackgroundLayer />
+            {children}
+          </LenisProvider>
+        </HeroProvider>
       </body>
     </html>
   );

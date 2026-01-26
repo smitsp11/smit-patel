@@ -1,35 +1,12 @@
+"use client";
+
+import { HeroSection } from "@/components/sections/HeroSection";
+
 export default function Home() {
   return (
     <main className="relative">
       {/* Hero Section - Phase 2 */}
-      <section
-        id="hero"
-        className="section-full flex items-center justify-center bg-vintage-cream"
-      >
-        <div className="text-center">
-          <h1 className="font-display text-6xl md:text-8xl text-vintage-dark-brown mb-4">
-            Your Name
-          </h1>
-          <p className="font-body text-xl md:text-2xl text-vintage-sepia">
-            Software Engineer & Photographer
-          </p>
-          <div className="mt-8 animate-bounce">
-            <svg
-              className="w-6 h-6 mx-auto text-vintage-rust"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </svg>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* About Section - Phase 3 */}
       <section
@@ -92,10 +69,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section - Phase 7 */}
-      <section
-        id="contact"
-        className="py-16 bg-vintage-dark-brown"
-      >
+      <section id="contact" className="py-16 bg-vintage-dark-brown">
         <div className="section-container text-center">
           <h2 className="font-display text-3xl md:text-4xl text-vintage-cream mb-6">
             Get In Touch
@@ -124,7 +98,7 @@ export default function Home() {
             </a>
           </div>
           <p className="mt-8 text-vintage-cream/60 text-sm">
-            © {new Date().getFullYear()} Your Name. All rights reserved.
+            © {new Date().getFullYear()} Smit Patel. All rights reserved.
           </p>
         </div>
       </section>
