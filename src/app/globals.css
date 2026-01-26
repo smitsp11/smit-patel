@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Vintage Photography Color Palette */
+  --color-cream: #fdfbf7;
+  --color-sepia: #d4a574;
+  --color-rust: #b87333;
+  --color-dark-brown: #3d2914;
+  --color-darkroom: #1a1a1a;
+
+  /* Font Variables */
+  --font-display: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+  --font-handwritten: "Caveat", cursive;
+
+  /* Film grain texture */
+  --film-grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+
+  /* Background transition */
+  --bg-color: var(--color-cream);
+}
+
+/* Global Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto; /* Lenis handles smooth scrolling */
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--color-dark-brown);
+  overflow-x: hidden;
+  transition: background-color 0.6s ease;
+}
+
+/* Fixed Background Layer for Smooth Color Transitions */
+.background-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: var(--color-cream);
+  transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Film Grain Overlay */
+.film-grain::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--film-grain);
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Typography Classes */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-handwritten {
+  font-family: var(--font-handwritten);
+}
+
+/* Vintage Text Effects */
+.text-sepia {
+  color: var(--color-sepia);
+}
+
+.text-rust {
+  color: var(--color-rust);
+}
+
+.text-cream {
+  color: var(--color-cream);
+}
+
+.text-dark-brown {
+  color: var(--color-dark-brown);
+}
+
+/* Utility Classes for Sections */
+.section-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Full viewport section */
+.section-full {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Polaroid Effect Base */
+.polaroid {
+  background: white;
+  padding: 0.75rem;
+  padding-bottom: 2.5rem;
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 10px 20px rgba(0, 0, 0, 0.08);
+  transform-origin: center center;
+}
+
+/* Film Strip Frame */
+.film-frame {
+  position: relative;
+  background: #1a1a1a;
+  padding: 0.5rem;
+  border-radius: 2px;
+}
+
+.film-frame::before,
+.film-frame::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 12px;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 8px,
+    #1a1a1a 8px,
+    #1a1a1a 10px,
+    transparent 10px,
+    transparent 14px
+  );
+}
+
+.film-frame::before {
+  left: -16px;
+}
+
+.film-frame::after {
+  right: -16px;
+}
+
+/* Darkroom Theme Modifier */
+.darkroom-theme {
+  --bg-color: var(--color-darkroom);
+  color: var(--color-cream);
+}
+
+/* Animation Utilities */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* GPU Acceleration for Animations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Responsive Breakpoints Helper */
+@media (max-width: 768px) {
+  .section-container {
+    padding: 0 1rem;
+  }
+}
+
+/* Custom Selection */
+::selection {
+  background-color: var(--color-sepia);
+  color: white;
+}
+
+::-moz-selection {
+  background-color: var(--color-sepia);
+  color: white;
+}
