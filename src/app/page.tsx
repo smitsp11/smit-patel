@@ -1,6 +1,7 @@
 "use client";
 
 import { HeroSection } from "@/components/sections/HeroSection";
+import { AboutSection } from "@/components/sections/AboutSection";
 
 export default function Home() {
   return (
@@ -9,19 +10,7 @@ export default function Home() {
       <HeroSection />
 
       {/* About Section - Phase 3 */}
-      <section
-        id="about"
-        className="section-full flex items-center bg-vintage-cream"
-      >
-        <div className="section-container">
-          <h2 className="font-display text-4xl md:text-5xl text-vintage-dark-brown mb-8">
-            About
-          </h2>
-          <p className="font-body text-lg text-vintage-dark-brown/80">
-            Coming in Phase 3...
-          </p>
-        </div>
-      </section>
+      <AboutSection />
 
       {/* Projects Section - Phase 4 */}
       <section

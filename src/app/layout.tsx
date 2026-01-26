@@ -3,6 +3,7 @@ import { Playfair_Display, Inter, Caveat } from "next/font/google";
 import "./globals.css";
 import { LenisProvider } from "@/components/providers/LenisProvider";
 import { BackgroundLayer } from "@/components/ui/BackgroundLayer";
+import { LensCursor } from "@/components/ui/LensCursor";
 import { HeroProvider } from "@/contexts/HeroContext";
 
 const playfair = Playfair_Display({
@@ -58,6 +59,7 @@ export default function RootLayout({
         <HeroProvider>
           <LenisProvider>
             <BackgroundLayer />
+            <LensCursor />
             {children}
           </LenisProvider>
         </HeroProvider>
