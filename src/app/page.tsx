@@ -4,6 +4,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
+import { GallerySection } from "@/components/sections/GallerySection";
 
 export default function Home() {
   return (
@@ -21,22 +22,10 @@ export default function Home() {
       <ExperienceSection />
 
       {/* Gallery Section - Phase 6 */}
-      <section
-        id="gallery"
-        className="section-full flex items-center bg-vintage-darkroom"
-      >
-        <div className="section-container">
-          <h2 className="font-display text-4xl md:text-5xl text-vintage-cream mb-8">
-            Gallery
-          </h2>
-          <p className="font-body text-lg text-vintage-cream/80">
-            Coming in Phase 6...
-          </p>
-        </div>
-      </section>
+      <GallerySection />
 
       {/* Contact Section - Phase 7 */}
-      <section id="contact" className="py-16 bg-vintage-dark-brown">
+      <section id="contact" className="relative py-16 bg-vintage-darkroom z-40">
         <div className="section-container text-center">
           <h2 className="font-display text-3xl md:text-4xl text-vintage-cream mb-6">
             Get In Touch

@@ -308,3 +308,125 @@ body {
     flex-direction: row !important;
   }
 }
+
+/* ==========================================================================
+   Gallery Section - Phase 6 (Darkroom Transition)
+   ========================================================================== */
+
+/* Gallery photo card with darkroom aesthetic */
+.gallery-photo-card {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-photo-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Darkroom ambient lighting effect */
+.darkroom-ambient {
+  position: relative;
+}
+
+.darkroom-ambient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 50%,
+    transparent 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  pointer-events: none;
+}
+
+/* Red darkroom safe light glow */
+.darkroom-safelight {
+  box-shadow: 
+    0 0 60px rgba(139, 0, 0, 0.15),
+    0 0 120px rgba(139, 0, 0, 0.08);
+}
+
+/* Gallery spotlight hover effect */
+.gallery-spotlight {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-spotlight::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.08) 0%,
+    transparent 50%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.gallery-spotlight:hover::after {
+  opacity: 1;
+}
+
+/* Carousel smooth scrolling enhancement */
+.gallery-carousel {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Photo frame border with vintage silver effect */
+.photo-frame-vintage {
+  border: 1px solid rgba(212, 165, 116, 0.2);
+  box-shadow: 
+    inset 0 0 20px rgba(0, 0, 0, 0.3),
+    0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Caption handwritten style enhancement */
+.caption-handwritten {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.02em;
+}
+
+/* Vignette effect for gallery atmosphere */
+.gallery-vignette {
+  background: radial-gradient(
+    circle at 50% 50%,
+    transparent 30%,
+    rgba(0, 0, 0, 0.6) 80%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+}
+
+/* Navigation dots active state */
+.nav-dot-active {
+  background: var(--color-sepia);
+  box-shadow: 0 0 8px rgba(212, 165, 116, 0.5);
+}
+
+/* Smooth background transition for the layer */
+#background-layer {
+  transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Gallery responsive adjustments */
+@media (max-width: 768px) {
+  .gallery-photo-card {
+    scroll-snap-align: center;
+  }
+  
+  .gallery-vignette {
+    background: radial-gradient(
+      circle at 50% 50%,
+      transparent 20%,
+      rgba(0, 0, 0, 0.5) 70%,
+      rgba(0, 0, 0, 0.75) 100%
+    );
+  }
+}
