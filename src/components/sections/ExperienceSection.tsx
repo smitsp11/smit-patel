@@ -64,16 +64,16 @@ const jobs: Job[] = [
 // Education data
 const education: Education = {
   id: "1",
-  institution: "University of Technology",
-  degree: "Bachelor of Science",
-  field: "Computer Science",
-  startDate: "2014",
-  endDate: "2018",
-  gpa: "3.8",
+  institution: "University of Toronto",
+  degree: "Computer Engineering",
+  field: "",
+  startDate: "2025",
+  endDate: "2029",
+  gpa: "",
   highlights: [
-    "Dean's List - All Semesters",
-    "Computer Science Club President",
-    "Hackathon Winner - Best Technical Implementation",
+    "Faculty of Applied Science & Engineering Award ($10,000)",
+    "",
+    "",
   ],
 };
 
