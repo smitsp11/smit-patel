@@ -15,23 +15,23 @@ if (typeof window !== "undefined") {
 const polaroids = [
   {
     id: 1,
-    src: "/images/polaroid-1.svg",
+    src: "/images/weekend.png",
     alt: "Coding setup",
-    caption: "Late night coding",
+    caption: ".",
     rotation: -8,
   },
   {
     id: 2,
-    src: "/images/polaroid-2.svg",
+    src: "/images/creativity.jpg",
     alt: "Mountain landscape",
-    caption: "Weekend adventures",
+    caption: ".",
     rotation: 5,
   },
   {
     id: 3,
-    src: "/images/polaroid-3.svg",
+    src: "/images/images.jpeg",
     alt: "Coffee and keyboard",
-    caption: "Fuel for creativity",
+    caption: ".",
     rotation: -3,
   },
 ];
@@ -133,28 +133,28 @@ export function AboutSection() {
           {/* Left Column - Bio */}
           <div ref={bioRef} className="space-y-6">
             <h3 className="font-display text-2xl md:text-3xl text-vintage-rust">
-              Hello, I&apos;m Smit
+              Hello, I&apos;m Smit.
             </h3>
             
             <div className="space-y-4 font-body text-lg text-vintage-dark-brown/80 leading-relaxed">
-              <p>
-                I&apos;m a software engineer with a passion for building beautiful, 
-                performant web experiences. When I&apos;m not writing code, you&apos;ll 
-                find me exploring the world through my camera lens.
+              <p className="text-vintage-rust">
+                Software Engineer. Photographer. Builder.
               </p>
               
               <p>
-                My journey in tech started with a curiosity for how things work 
-                under the hood. That curiosity has evolved into a career where I 
-                get to craft digital experiences that are both functional and 
-                delightful.
+                <span className="font-semibold">The Craft:</span> Writing code that turns ideas into products.
               </p>
               
               <p>
-                I believe in the intersection of technology and art — where clean 
-                code meets thoughtful design. This portfolio itself is a reflection 
-                of that philosophy, blending modern web technologies with vintage 
-                photography aesthetics.
+                <span className="font-semibold">The Aesthetic:</span> Inspired by photography, late-night drives, and storytelling.
+              </p>
+
+              <p>
+                <span className="font-semibold">The Fuel:</span> Weight lifting, Drake albums, and adrenaline from Formula 1.
+              </p>
+
+              <p>
+                <span className="font-semibold">The Community:</span> Love hosting events for connections and amazing vibes.
               </p>
             </div>
 
@@ -165,12 +165,13 @@ export function AboutSection() {
               </p>
               <div className="flex flex-wrap gap-2">
                 {[
-                  "React",
-                  "TypeScript",
-                  "Next.js",
-                  "Three.js",
+                  "Python",
                   "Node.js",
-                  "Photography",
+                  "LLMs",
+                  "FastAPI",
+                  "PostgreSQL",
+                  "AWS",
+                  "Canon Camera",
                 ].map((skill) => (
                   <span
                     key={skill}

@@ -16,15 +16,14 @@ if (typeof window !== "undefined") {
 const projects: Project[] = [
   {
     id: "1",
-    title: "AI Code Assistant",
+    title: "BehavAced",
     description:
-      "An intelligent code completion and suggestion tool powered by machine learning, helping developers write better code faster.",
-    techStack: ["Python", "TensorFlow", "FastAPI", "React"],
-    imageUrl: "/images/polaroid-1.svg",
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
+      "An AI-powered behavioral interview that helps improve your communication during interviews.",
+    techStack: ["Python", "Supabase", "AI", "Next.js"],
+    imageUrl: "/images/behavaced,png",
+    githubUrl: "https://github.com/smitsp11/BehavAced",
     featured: true,
-    year: 2024,
+    year: 2025,
   },
   {
     id: "2",
@@ -189,10 +188,6 @@ export function ProjectsSection() {
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-vintage-dark-brown mb-4">
             Projects
           </h2>
-          <p className="font-body text-lg text-vintage-dark-brown/70 max-w-2xl mx-auto">
-            A collection of work I&apos;m proud of — each frame tells a story of
-            problem-solving, creativity, and technical craft.
-          </p>
         </div>
       </div>
 
