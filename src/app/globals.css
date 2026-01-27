@@ -126,6 +126,42 @@ body {
   padding: 0 2rem;
 }
 
+/* Screen reader only - for accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only:focus,
+.sr-only:focus-visible {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+.focus\:not-sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
 /* Full viewport section */
 .section-full {
   min-height: 100vh;
@@ -306,6 +342,98 @@ body {
   
   .timeline-card ul li {
     flex-direction: row !important;
+  }
+}
+
+/* ==========================================================================
+   Phase 7: Performance & Mobile Optimizations
+   ========================================================================== */
+
+/* Reduced motion support for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .will-change-transform,
+  .will-change-opacity {
+    will-change: auto;
+  }
+}
+
+/* Safari-specific fixes */
+@supports (-webkit-backdrop-filter: blur(1px)) {
+  .safari-backdrop-fallback {
+    -webkit-backdrop-filter: blur(1px) contrast(1.1) saturate(1.05);
+    backdrop-filter: blur(1px) contrast(1.1) saturate(1.05);
+  }
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not (backdrop-filter: blur(1px)) {
+  .backdrop-fallback {
+    background-color: rgba(201, 165, 92, 0.15);
+  }
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  /* Reduce parallax effects on mobile for performance */
+  .will-change-transform {
+    will-change: auto;
+  }
+  
+  /* Simplify film grain for mobile performance */
+  .film-grain::before {
+    opacity: 0.02;
+  }
+  
+  /* Better touch targets */
+  button,
+  a,
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Improve gallery scrolling on mobile */
+  .gallery-carousel {
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+}
+
+/* Print styles */
+@media print {
+  .film-grain::before,
+  .background-layer,
+  #background-layer,
+  .lens-cursor {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --color-sepia: #b87333;
+    --color-rust: #8b4513;
+  }
+  
+  .timeline-card,
+  .polaroid,
+  .education-card {
+    border-width: 2px;
   }
 }
 

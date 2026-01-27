@@ -131,12 +131,13 @@ export function LensCursor() {
               shadow-[0_0_20px_rgba(201,165,92,0.3)]
             "
           >
-            {/* Inner lens glass */}
+            {/* Inner lens glass with Safari fallback */}
             <div
               className="
                 w-full h-full rounded-full
                 bg-gradient-to-br from-transparent via-white/5 to-transparent
                 backdrop-blur-[1px]
+                safari-backdrop-fallback
               "
               style={{
                 backdropFilter: "contrast(1.1) saturate(1.05)",
