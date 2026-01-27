@@ -63,7 +63,7 @@ const projects: Project[] = [
     description:
       "Shazam for items, take a picture of the item and be able to check it out in a matter of seconds.",
     techStack: ["", "", "", ""],
-    imageUrl: "/images/findgpt.png",
+    imageUrl: "/images/cs.png",
     featured: true,
     year: 2026,
   },
