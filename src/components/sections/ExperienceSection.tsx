@@ -230,10 +230,7 @@ export function ExperienceSection() {
         <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-vintage-dark-brown mb-4">
           Experience
         </h2>
-        <p className="font-body text-lg text-vintage-dark-brown/70 max-w-2xl mx-auto">
-          A journey through my professional career — each role has shaped who I am
-          as a developer and collaborator.
-        </p>
+
       </div>
 
       {/* Timeline Container */}
@@ -337,6 +334,56 @@ export function ExperienceSection() {
       {/* Education Section */}
       <div className="section-container mt-20 md:mt-32">
         <EducationCard ref={educationRef} education={education} />
+        
+        {/* Resume Link Box */}
+        <div className="mt-8 flex justify-center">
+          <a
+            href="https://drive.google.com/file/d/1tYTzsVRaghabD1o-9qSqyDoylij1ZIIY/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              relative
+              inline-block
+              px-6 py-3
+              bg-white/95
+              rounded-lg
+              shadow-lg
+              border border-vintage-sepia/20
+              hover:shadow-xl
+              hover:border-vintage-sepia/40
+              transition-all duration-300
+              group
+            "
+          >
+            {/* Film grain texture overlay */}
+            <div 
+              className="absolute inset-0 rounded-lg opacity-[0.03] pointer-events-none"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+              }}
+            />
+            
+            <div className="relative flex items-center gap-2">
+              <span className="font-body text-vintage-dark-brown group-hover:text-vintage-rust transition-colors">
+                View Resume
+              </span>
+              <svg
+                className="w-4 h-4 text-vintage-sepia group-hover:text-vintage-rust transition-colors"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
   );
