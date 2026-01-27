@@ -18,62 +18,46 @@ if (typeof window !== "undefined") {
 const jobs: Job[] = [
   {
     id: "1",
-    company: "Tech Innovations Inc.",
-    role: "Senior Software Engineer",
-    location: "San Francisco, CA",
-    startDate: "2023",
+    company: "Stealth",
+    role: "Software Engineer Intern",
+    location: "Ottawa, ON",
+    startDate: "2026",
     endDate: "Present",
     description:
-      "Leading frontend architecture for a high-traffic SaaS platform, focusing on performance optimization and developer experience.",
-    highlights: [
-      "Reduced bundle size by 40% through code splitting",
-      "Implemented design system used across 5 product teams",
-      "Mentored junior developers in React best practices",
-    ],
+    "Fintech consulting firm to help examining investment opporunities and facilitating financing.",
   },
+  
   {
     id: "2",
-    company: "StartupXYZ",
-    role: "Full Stack Developer",
-    location: "Remote",
-    startDate: "2021",
-    endDate: "2023",
+    company: "UofT Formula Racing Team",
+    role: "Software Developer",
+    location: "Toronto, ON",
+    startDate: "2025",
+    endDate: "2026",
     description:
-      "Built and maintained core features for a B2B analytics platform serving enterprise clients.",
-    highlights: [
-      "Developed real-time data visualization dashboard",
-      "Integrated third-party APIs for automated reporting",
-      "Improved API response times by 60%",
-    ],
+      "Built the 'brain' that allows a formula race car to see the track and drive itself.",
   },
+
   {
     id: "3",
-    company: "Digital Agency Co.",
-    role: "Frontend Developer",
-    location: "New York, NY",
-    startDate: "2019",
-    endDate: "2021",
+    company: "TailorMate Startup",
+    role: "Founder",
+    location: "Toronto, ON",
+    startDate: "2025",
+    endDate: "2026",
     description:
-      "Created responsive web experiences for Fortune 500 clients with focus on accessibility and performance.",
-    highlights: [
-      "Delivered 20+ client projects on time and budget",
-      "Achieved WCAG 2.1 AA compliance on all projects",
-      "Introduced component-based architecture to the team",
-    ],
+      "Engineered the AI infrastructure and recommendation algorithms behind a personalized fashion marketplace for over 1,000 products.",
   },
+  
   {
     id: "4",
-    company: "Code Academy",
-    role: "Junior Developer",
-    location: "Boston, MA",
-    startDate: "2018",
-    endDate: "2019",
+    company: "Stupid Ideas Hackathon",
+    role: "Co-Founder",
+    location: "Toronto, ON",
+    startDate: "2015",
+    endDate: "Present",
     description:
-      "Started my professional journey building educational tools and learning management systems.",
-    highlights: [
-      "Built interactive coding exercises with real-time feedback",
-      "Collaborated with content team on curriculum development",
-    ],
+      "Building a global community of builders by removing the pressure of competition and reintroducing passion in creation.",
   },
 ];
 

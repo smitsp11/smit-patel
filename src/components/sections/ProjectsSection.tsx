@@ -32,6 +32,7 @@ const projects: Project[] = [
       "Inspired by Suit's Donna: A voice AI assistant with conversation, memory, and reminder scheduling.",
     techStack: ["Python", "FastAPI", "PostgreSQL", "Celery"],
     imageUrl: "/images/sonna.png",
+    githubUrl: "https://github.com/smitsp11/sonna",
     featured: true,
     year: 2025,
   },
