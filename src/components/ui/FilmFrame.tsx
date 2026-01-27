@@ -84,7 +84,7 @@ export const FilmFrame = forwardRef<HTMLDivElement, FilmFrameProps>(
                   {project.title}
                 </h3>
                 
-                <p className="font-body text-sm text-vintage-cream/80 mb-3 line-clamp-2">
+                <p className="font-body text-sm text-vintage-cream mb-3 line-clamp-2">
                   {project.description}
                 </p>
 
@@ -160,11 +160,6 @@ export const FilmFrame = forwardRef<HTMLDivElement, FilmFrameProps>(
                   )}
                 </div>
               </div>
-            </div>
-
-            {/* Frame number */}
-            <div className="absolute top-2 right-2 font-mono text-xs text-vintage-sepia/60">
-              {String(index + 1).padStart(2, "0")}
             </div>
           </div>
         </div>
