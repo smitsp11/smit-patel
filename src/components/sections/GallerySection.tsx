@@ -226,7 +226,7 @@ export function GallerySection() {
       {/* Content Container */}
       <div className="relative z-30">
         {/* Section Header */}
-        <div ref={headerRef} className="section-container text-center mb-12 md:mb-16">
+        <div ref={headerRef} className="section-container text-center mb-12 md:mb-16 relative z-10">
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-vintage-cream mb-4">
             Gallery
           </h2>
@@ -236,12 +236,12 @@ export function GallerySection() {
         </div>
 
         {/* Carousel Container */}
-        <div ref={carouselRef} className="relative mt-8 md:mt-12">
+        <div ref={carouselRef} className="relative z-50 mt-16 md:mt-24">
           {/* Gallery Track */}
           <div
             ref={carouselInnerRef}
             onScroll={handleScroll}
-            className="flex gap-6 overflow-x-auto hide-scrollbar px-8 md:px-16 pb-8 snap-x snap-mandatory"
+            className="flex gap-6 overflow-x-auto hide-scrollbar px-8 md:px-16 pb-8 pt-8 snap-x snap-mandatory"
             style={{ scrollSnapType: "x mandatory" }}
           >
             {galleryPhotos.map((photo, index) => (
