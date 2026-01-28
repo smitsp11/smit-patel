@@ -54,7 +54,7 @@ const jobs: Job[] = [
     company: "Stupid Ideas Hackathon",
     role: "Co-Founder",
     location: "Toronto, ON",
-    startDate: "2015",
+    startDate: "2025",
     endDate: "Present",
     description:
       "Building a global community of builders by removing the pressure of competition and reintroducing passion in creation.",
@@ -67,13 +67,11 @@ const education: Education = {
   institution: "University of Toronto",
   degree: "Computer Engineering",
   field: "",
-  startDate: "2025",
-  endDate: "2029",
+  startDate: "",
+  endDate: "Expected Graduation 2029",
   gpa: "",
   highlights: [
     "Faculty of Applied Science & Engineering Award ($10,000)",
-    "",
-    "",
   ],
 };
 

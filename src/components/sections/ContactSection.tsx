@@ -15,22 +15,22 @@ if (typeof window !== "undefined") {
 const socialLinks: SocialLink[] = [
   {
     platform: "github",
-    url: "https://github.com/smitpatel",
+    url: "https://github.com/smitsp11",
     label: "GitHub",
   },
   {
     platform: "linkedin",
-    url: "https://linkedin.com/in/smitpatel",
+    url: "https://www.linkedin.com/in/smit11patel",
     label: "LinkedIn",
   },
   {
     platform: "twitter",
-    url: "https://twitter.com/smitpatel",
-    label: "Twitter",
+    url: "https://x.com/smitspatel11",
+    label: "X",
   },
   {
     platform: "email",
-    url: "mailto:hello@smitpatel.dev",
+    url: "mailto:smitspatel11@gmail.com",
     label: "Email",
   },
 ];
@@ -230,24 +230,6 @@ export function ContactSection() {
               <span className="font-body text-sm md:text-base">{link.label}</span>
             </a>
           ))}
-        </div>
-
-        {/* Email CTA */}
-        <div className="text-center mb-12">
-          <a
-            href="mailto:hello@smitpatel.dev"
-            className="
-              inline-flex items-center gap-2
-              font-handwritten text-2xl md:text-3xl
-              text-vintage-sepia
-              hover:text-vintage-cream
-              transition-colors duration-300
-              underline underline-offset-4 decoration-vintage-sepia/30
-              hover:decoration-vintage-cream/50
-            "
-          >
-            hello@smitpatel.dev
-          </a>
         </div>
 
         {/* Decorative aperture icon */}

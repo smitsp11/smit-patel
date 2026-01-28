@@ -85,7 +85,7 @@ export const EducationCard = forwardRef<HTMLDivElement, EducationCardProps>(
 
         {/* Years */}
         <p className="font-body text-vintage-cream/60 mb-4">
-          {education.startDate} — {education.endDate}
+          {education.startDate ? `${education.startDate} — ${education.endDate}` : education.endDate}
         </p>
 
         {/* GPA if available */}

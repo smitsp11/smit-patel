@@ -16,55 +16,55 @@ if (typeof window !== "undefined") {
 const galleryPhotos: Photo[] = [
   {
     id: "1",
-    src: "/images/polaroid-1.jpg",
+    src: "/images/IMG_0121.jpg",
     alt: "Landscape photography - Mountain vista",
-    caption: "Chasing horizons",
-    location: "Swiss Alps",
+    caption: "Beach Sunset",
+    location: "Port Burwell, Canada",
     width: 800,
     height: 600,
   },
   {
     id: "2",
-    src: "/images/polaroid-2.jpg",
+    src: "/images/IMG_6976.jpg",
     alt: "Street photography - Urban scene",
-    caption: "City rhythms",
-    location: "Tokyo, Japan",
+    caption: "Santorini Stairs",
+    location: "Santorini, Greece",
     width: 800,
     height: 600,
   },
   {
     id: "3",
-    src: "/images/polaroid-3.jpg",
+    src: "/images/IMG_3958.png",
     alt: "Nature photography - Forest path",
-    caption: "Into the wild",
-    location: "Pacific Northwest",
+    caption: "Chicago Skyline",
+    location: "Chicago, USA",
     width: 800,
     height: 600,
   },
   {
     id: "4",
-    src: "/images/polaroid-1.jpg",
+    src: "/images/IMG_8156.png",
     alt: "Golden hour photography",
-    caption: "Golden moments",
-    location: "California Coast",
+    caption: "Rooftop",
+    location: "Toronto, Canada",
     width: 800,
     height: 600,
   },
   {
     id: "5",
-    src: "/images/polaroid-2.jpg",
+    src: "/images/IMG_8188.png",
     alt: "Portrait photography",
-    caption: "Stories untold",
-    location: "New York City",
+    caption: "Mykonos Alley",
+    location: "Mykonos, Greece",
     width: 800,
     height: 600,
   },
   {
     id: "6",
-    src: "/images/polaroid-3.jpg",
+    src: "/images/IMG_8507.png",
     alt: "Architecture photography",
-    caption: "Lines and shadows",
-    location: "Barcelona, Spain",
+    caption: "Toronto Ferry",
+    location: "Toronto, Canada",
     width: 800,
     height: 600,
   },
@@ -236,7 +236,7 @@ export function GallerySection() {
         </div>
 
         {/* Carousel Container */}
-        <div ref={carouselRef} className="relative">
+        <div ref={carouselRef} className="relative mt-8 md:mt-12">
           {/* Gallery Track */}
           <div
             ref={carouselInnerRef}
@@ -250,7 +250,7 @@ export function GallerySection() {
                 ref={(el) => {
                   photoRefs.current[index] = el;
                 }}
-                className="gallery-photo-card flex-shrink-0 w-[320px] md:w-[400px] snap-center"
+                className="gallery-photo-card relative z-40 flex-shrink-0 w-[320px] md:w-[400px] snap-center"
               >
                 {/* Photo Frame */}
                 <div className="relative group">
