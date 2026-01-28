@@ -231,7 +231,7 @@ export function GallerySection() {
             Gallery
           </h2>
           <p className="font-body text-lg text-vintage-cream/70 max-w-2xl mx-auto">
-            Through the lens — capturing moments that tell stories beyond words.
+            capturing my favourite moments
           </p>
         </div>
 

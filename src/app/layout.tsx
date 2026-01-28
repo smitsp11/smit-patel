@@ -25,7 +25,7 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Smit Patel | Software Engineer & Photographer",
+  title: "Smit Patel | Software Engineer",
   description:
     "A vintage photography-themed portfolio showcasing software engineering projects, experience, and creative work.",
   keywords: [

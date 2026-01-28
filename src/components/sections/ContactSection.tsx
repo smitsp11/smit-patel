@@ -192,8 +192,7 @@ export function ContactSection() {
             Get In Touch
           </h2>
           <p className="font-body text-lg text-vintage-cream/70 max-w-xl mx-auto">
-            Whether you have a project in mind, want to collaborate, or just want
-            to say hello — I&apos;d love to hear from you.
+            I&apos;d love to hear from you.
           </p>
         </div>
 
