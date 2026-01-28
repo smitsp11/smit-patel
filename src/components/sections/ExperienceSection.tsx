@@ -119,6 +119,7 @@ export function ExperienceSection() {
       }
 
       // Timeline line grows from 0% to 100% height as user scrolls
+      // Extended to include Education section
       gsap.fromTo(
         timelineLineRef.current,
         { scaleY: 0 },
@@ -126,9 +127,9 @@ export function ExperienceSection() {
           scaleY: 1,
           ease: "none",
           scrollTrigger: {
-            trigger: timelineRef.current,
+            trigger: sectionRef.current,
             start: "top 60%",
-            end: "bottom 40%",
+            end: "bottom 20%",
             scrub: 0.5,
           },
         }
@@ -231,10 +232,10 @@ export function ExperienceSection() {
 
       </div>
 
-      {/* Timeline Container */}
+      {/* Timeline Container - Extended to include Education */}
       <div ref={timelineRef} className="relative section-container">
-        {/* Central Timeline Line */}
-        <div className="absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2 hidden md:block">
+        {/* Central Timeline Line - Extended to connect to Education */}
+        <div className="absolute left-1/2 top-0 w-px -translate-x-1/2 hidden md:block" style={{ bottom: '-12rem' }}>
           {/* Background line (faded) */}
           <div className="absolute inset-0 bg-vintage-sepia/20" />
           {/* Animated growing line */}
@@ -244,8 +245,8 @@ export function ExperienceSection() {
           />
         </div>
 
-        {/* Mobile Timeline Line (left-aligned) */}
-        <div className="absolute left-8 top-0 bottom-0 w-px md:hidden">
+        {/* Mobile Timeline Line (left-aligned) - Extended */}
+        <div className="absolute left-8 top-0 w-px md:hidden" style={{ bottom: '-12rem' }}>
           <div className="absolute inset-0 bg-vintage-sepia/20" />
           <div className="absolute inset-0 bg-gradient-to-b from-vintage-sepia via-vintage-rust to-vintage-dark-brown origin-top timeline-line-mobile" />
         </div>
@@ -322,15 +323,28 @@ export function ExperienceSection() {
             );
           })}
         </div>
-
-        {/* Timeline End Cap */}
-        <div className="hidden md:flex justify-center mt-16">
-          <div className="w-4 h-4 bg-vintage-dark-brown rounded-full shadow-lg" />
-        </div>
       </div>
 
-      {/* Education Section */}
-      <div className="section-container mt-20 md:mt-32">
+      {/* Education Section - Connected to Timeline */}
+      <div className="section-container mt-20 md:mt-32 relative">
+        {/* Timeline connector node - centers above Education card */}
+        <div className="hidden md:flex justify-center mb-6">
+          <div className="relative">
+            {/* Glowing background */}
+            <div className="absolute inset-0 bg-vintage-sepia/20 rounded-full blur-md scale-150" />
+            {/* Node circle */}
+            <div className="relative w-5 h-5 bg-vintage-dark-brown rounded-full border-2 border-vintage-sepia shadow-lg" />
+          </div>
+        </div>
+        
+        {/* Mobile connector node */}
+        <div className="md:hidden absolute left-4 -top-4 z-10">
+          <div className="relative">
+            <div className="absolute inset-0 bg-vintage-sepia/20 rounded-full blur-sm scale-150" />
+            <div className="w-4 h-4 bg-vintage-dark-brown rounded-full border-2 border-vintage-sepia shadow-md" />
+          </div>
+        </div>
+        
         <EducationCard ref={educationRef} education={education} />
         
         {/* Resume Link Box */}

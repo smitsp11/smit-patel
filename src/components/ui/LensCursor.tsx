@@ -127,49 +127,50 @@ export function LensCursor() {
             className="
               w-12 h-12 rounded-full
               bg-gradient-to-br from-[#c9a55c] via-[#e8d5a3] to-[#8b7355]
-              p-[3px]
-              shadow-[0_0_20px_rgba(201,165,92,0.3)]
+              p-[2px]
+              shadow-[0_0_15px_rgba(201,165,92,0.25)]
             "
           >
-            {/* Inner lens glass with Safari fallback */}
+            {/* Inner lens glass - optimized for text legibility */}
             <div
               className="
                 w-full h-full rounded-full
-                bg-gradient-to-br from-transparent via-white/5 to-transparent
-                backdrop-blur-[1px]
                 safari-backdrop-fallback
               "
               style={{
-                backdropFilter: "contrast(1.1) saturate(1.05)",
-                WebkitBackdropFilter: "contrast(1.1) saturate(1.05)",
+                /* Minimal backdrop effect to preserve text contrast */
+                backdropFilter: "saturate(1.1)",
+                WebkitBackdropFilter: "saturate(1.1)",
+                /* Very subtle tint that doesn't wash out text */
+                background: "radial-gradient(circle at 30% 30%, rgba(255,255,255,0.08), transparent 60%)",
               }}
             >
-              {/* Lens reflection highlight */}
+              {/* Lens reflection highlight - reduced opacity */}
               <div
                 className="
-                  absolute top-1 left-1 w-3 h-3 rounded-full
-                  bg-gradient-to-br from-white/40 to-transparent
+                  absolute top-1 left-1 w-2.5 h-2.5 rounded-full
+                  bg-gradient-to-br from-white/25 to-transparent
                 "
               />
               
-              {/* Center dot */}
+              {/* Center dot - more subtle */}
               <div
                 className="
                   absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-                  w-1.5 h-1.5 rounded-full
+                  w-1 h-1 rounded-full
                   bg-gradient-to-br from-[#c9a55c] to-[#8b7355]
-                  opacity-60
+                  opacity-40
                 "
               />
             </div>
           </div>
 
-          {/* Decorative lens ring details */}
+          {/* Decorative lens ring details - slightly more visible for definition */}
           <div
             className="
               absolute inset-0 rounded-full
-              border border-[#c9a55c]/20
-              scale-[1.15]
+              border border-[#c9a55c]/30
+              scale-[1.12]
             "
           />
         </div>
