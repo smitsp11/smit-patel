@@ -191,7 +191,7 @@ export function ContactSection() {
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-vintage-cream mb-4">
             Get In Touch
           </h2>
-          <p className="font-body text-lg text-vintage-cream/70 max-w-xl mx-auto">
+          <p className="font-body text-lg text-vintage-antique-white max-w-xl mx-auto">
             I&apos;d love to hear from you.
           </p>
         </div>
@@ -242,9 +242,6 @@ export function ContactSection() {
 
         {/* Footer */}
         <div className="text-center pt-8 border-t border-vintage-cream/10">
-          <p className="font-body text-vintage-cream/50 text-sm mb-2">
-            Crafted with care using Next.js, Three.js, and GSAP
-          </p>
           <p className="font-body text-vintage-cream/40 text-xs">
             © {new Date().getFullYear()} Smit Patel. All rights reserved.
           </p>

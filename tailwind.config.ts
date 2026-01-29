@@ -22,6 +22,7 @@ const config: Config = {
           brass: "var(--color-vintage-brass)",
           "warm-cream": "var(--color-warm-cream)",
           "parchment-grey": "var(--color-parchment-grey)",
+          "antique-white": "var(--color-antique-white)",
         },
       },
       fontFamily: {
