@@ -2,7 +2,7 @@
 
 import { useRef, useEffect } from "react";
 import { useFrame } from "@react-three/fiber";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, PresentationControls } from "@react-three/drei";
 import { Group, Mesh, MeshStandardMaterial } from "three";
 import { useHero } from "@/contexts/HeroContext";
 import { GLTF } from "three-stdlib";
@@ -16,9 +16,11 @@ type GLTFResult = GLTF & {
 /**
  * Vintage Camera 3D Model
  * Loads a GLB model and applies scroll-based animations
+ * Supports mouse drag interaction before scrolling via PresentationControls
  */
 export function CameraModel() {
-  const groupRef = useRef<Group>(null);
+  const scrollGroupRef = useRef<Group>(null);
+  const floatGroupRef = useRef<Group>(null);
   const { scrollProgress, cameraOpacity, setIsModelLoaded } = useHero();
 
   // Load the GLB model
@@ -31,19 +33,19 @@ export function CameraModel() {
     }
   }, [scene, setIsModelLoaded]);
 
-  // Animation loop for subtle idle movement and scroll-based rotation
+  // Animation loop for floating movement and scroll-based rotation
   useFrame((state) => {
-    if (!groupRef.current) return;
+    if (!scrollGroupRef.current || !floatGroupRef.current) return;
 
     const time = state.clock.elapsedTime;
 
-    // Subtle floating animation
-    groupRef.current.position.y = Math.sin(time * 0.5) * 0.05;
+    // Subtle floating animation on the float group
+    floatGroupRef.current.position.y = Math.sin(time * 0.5) * 0.05;
 
-    // Scroll-based rotation (0% to 50% scroll)
+    // Scroll-based rotation (0% to 50% scroll) on the scroll group
     const rotationProgress = Math.min(scrollProgress * 2, 1);
-    groupRef.current.rotation.y = -0.3 + rotationProgress * 0.6;
-    groupRef.current.rotation.x = 0.1 - rotationProgress * 0.2;
+    scrollGroupRef.current.rotation.y = -0.3 + rotationProgress * 0.6;
+    scrollGroupRef.current.rotation.x = 0.1 - rotationProgress * 0.2;
 
     // Update opacity on all meshes in the scene
     scene.traverse((child) => {
@@ -58,13 +60,33 @@ export function CameraModel() {
     });
   });
 
+  // Check if user interaction should be enabled
+  const isInteractionEnabled = scrollProgress < 0.1;
+
   return (
-    <group ref={groupRef} position={[0, -0.5, 0]} rotation={[0.1, -0.3, 0]}>
-      <primitive 
-        object={scene} 
-        scale={0.8}
-        position={[0, 0, 0]}
-      />
+    <group ref={floatGroupRef} position={[0, -0.5, 0]}>
+      {/* PresentationControls: User drag interaction (outer layer) */}
+      <PresentationControls
+        enabled={isInteractionEnabled}
+        global={true}
+        cursor={isInteractionEnabled}
+        snap={true}
+        speed={1.5}
+        zoom={1}
+        rotation={[0, 0, 0]}
+        polar={[-0.4, 0.4]}
+        azimuth={[-0.8, 0.8]}
+        config={{ mass: 1, tension: 170, friction: 26 }}
+      >
+        {/* Scroll-controlled rotation group (inner layer) */}
+        <group ref={scrollGroupRef} rotation={[0.1, -0.3, 0]}>
+          <primitive 
+            object={scene} 
+            scale={0.8}
+            position={[0, 0, 0]}
+          />
+        </group>
+      </PresentationControls>
     </group>
   );
 }
