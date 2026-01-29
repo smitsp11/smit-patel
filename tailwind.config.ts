@@ -16,6 +16,11 @@ const config: Config = {
           rust: "var(--color-rust)",
           "dark-brown": "var(--color-dark-brown)",
           darkroom: "var(--color-darkroom)",
+          // High Dynamic Range Contrast Colors
+          "iron-gall": "var(--color-iron-gall)",
+          "muted-umber": "var(--color-muted-umber)",
+          brass: "var(--color-vintage-brass)",
+          "warm-cream": "var(--color-warm-cream)",
         },
       },
       fontFamily: {

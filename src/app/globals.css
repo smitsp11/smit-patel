@@ -9,6 +9,12 @@
   --color-rust: #b87333;
   --color-dark-brown: #3d2914;
   --color-darkroom: #1a1a1a;
+  
+  /* High Dynamic Range Contrast Palette */
+  --color-iron-gall: #1c1410;        /* Deep brown-black for primary body text */
+  --color-muted-umber: #5c4033;      /* Mid-brown for secondary labels */
+  --color-vintage-brass: #c9a55c;    /* Gold/brass for accents */
+  --color-warm-cream: #f5efe6;       /* Slightly warmer cream for detail text */
 
   /* Font Variables */
   --font-display: "Playfair Display", serif;

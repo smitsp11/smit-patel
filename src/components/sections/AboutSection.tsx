@@ -136,31 +136,33 @@ export function AboutSection() {
               Hello, I&apos;m Smit.
             </h3>
             
-            <div className="space-y-4 font-body text-lg text-vintage-dark-brown/80 leading-relaxed">
-              <p className="text-vintage-rust">
+            {/* Primary body text - Deep Iron Gall for solid visual anchor */}
+            <div className="space-y-4 font-body text-lg text-vintage-iron-gall leading-relaxed">
+              <p className="text-vintage-rust font-medium">
                 Software Engineer. Photographer. Builder.
               </p>
               
               <p>
-                <span className="font-semibold">The Craft:</span> Writing code that turns ideas into products.
+                <span className="font-semibold text-vintage-iron-gall">The Craft:</span> Writing code that turns ideas into products.
               </p>
               
               <p>
-                <span className="font-semibold">The Aesthetic:</span> Inspired by photography, late-night drives, and storytelling.
+                <span className="font-semibold text-vintage-iron-gall">The Aesthetic:</span> Inspired by photography, late-night drives, and storytelling.
               </p>
 
               <p>
-                <span className="font-semibold">The Fuel:</span> Weight lifting, Drake albums, and adrenaline from Formula 1.
+                <span className="font-semibold text-vintage-iron-gall">The Fuel:</span> Weight lifting, Drake albums, and adrenaline from Formula 1.
               </p>
 
               <p>
-                <span className="font-semibold">The Community:</span> Love hosting events for connections and amazing vibes.
+                <span className="font-semibold text-vintage-iron-gall">The Community:</span> Love hosting events for connections and amazing vibes.
               </p>
             </div>
 
             {/* Skills/Interests tags */}
             <div className="pt-4">
-              <p className="font-handwritten text-xl text-vintage-sepia mb-3">
+              {/* Secondary label - Muted Umber for clear visibility */}
+              <p className="font-handwritten text-xl text-vintage-muted-umber mb-3">
                 Things I love working with:
               </p>
               <div className="flex flex-wrap gap-2">
@@ -176,12 +178,15 @@ export function AboutSection() {
                   <span
                     key={skill}
                     className="
-                      px-3 py-1
-                      bg-vintage-sepia/10
-                      border border-vintage-sepia/30
+                      px-3 py-1.5
+                      bg-vintage-muted-umber/10
+                      border border-vintage-muted-umber/40
                       rounded-full
-                      font-body text-sm
-                      text-vintage-dark-brown
+                      font-body text-sm font-medium
+                      text-vintage-iron-gall
+                      transition-colors duration-200
+                      hover:bg-vintage-muted-umber/15
+                      hover:border-vintage-muted-umber/50
                     "
                   >
                     {skill}

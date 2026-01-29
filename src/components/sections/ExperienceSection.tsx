@@ -377,7 +377,7 @@ export function ExperienceSection() {
             
             <div className="relative flex items-center gap-2">
               <span className="font-body text-vintage-dark-brown group-hover:text-vintage-rust transition-colors">
-                View Resume
+                Resume
               </span>
               <svg
                 className="w-4 h-4 text-vintage-sepia group-hover:text-vintage-rust transition-colors"

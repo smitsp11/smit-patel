@@ -62,49 +62,49 @@ export const EducationCard = forwardRef<HTMLDivElement, EducationCardProps>(
         </div>
 
         {/* Label */}
-        <div className="inline-block px-4 py-1.5 mb-6 bg-vintage-sepia/20 rounded-full">
-          <span className="font-handwritten text-lg text-vintage-sepia">
+        <div className="inline-block px-4 py-1.5 mb-6 bg-vintage-brass/20 rounded-full border border-vintage-brass/30">
+          <span className="font-handwritten text-lg text-vintage-brass">
             Education
           </span>
         </div>
 
-        {/* Degree */}
-        <h3 className="font-display text-2xl md:text-3xl text-vintage-cream mb-2">
-          {education.degree}
+        {/* Institution - Most prominent, high-contrast cream white */}
+        <h3 className="font-display text-2xl md:text-3xl text-vintage-cream mb-3 tracking-wide">
+          {education.institution}
         </h3>
 
-        {/* Field of study */}
-        <p className="font-body text-lg text-vintage-sepia mb-4">
+        {/* Degree - Vintage Brass with increased font weight */}
+        <p className="font-display text-xl md:text-2xl text-vintage-brass font-semibold mb-2">
+          {education.degree}
+        </p>
+
+        {/* Field of study - Warm cream for visibility */}
+        <p className="font-body text-lg text-vintage-warm-cream mb-4">
           {education.field}
         </p>
 
-        {/* Institution */}
-        <p className="font-display text-xl text-vintage-cream/90 mb-2">
-          {education.institution}
-        </p>
-
-        {/* Years */}
-        <p className="font-body text-vintage-cream/60 mb-4">
+        {/* Years - Brighter cream for better visibility */}
+        <p className="font-body text-vintage-cream/80 mb-4 tracking-wide">
           {education.startDate ? `${education.startDate} — ${education.endDate}` : education.endDate}
         </p>
 
-        {/* GPA if available */}
+        {/* GPA if available - Enhanced visibility */}
         {education.gpa && (
-          <div className="inline-block px-3 py-1 bg-vintage-sepia/10 rounded mb-4">
-            <span className="font-body text-sm text-vintage-cream/80">
+          <div className="inline-block px-4 py-1.5 bg-vintage-brass/15 rounded-full border border-vintage-brass/25 mb-4">
+            <span className="font-body text-sm text-vintage-cream font-medium">
               GPA: {education.gpa}
             </span>
           </div>
         )}
 
-        {/* Highlights */}
+        {/* Highlights/Awards - Brighter for better readability */}
         {education.highlights && education.highlights.length > 0 && (
-          <div className="mt-6 pt-6 border-t border-vintage-cream/10">
+          <div className="mt-6 pt-6 border-t border-vintage-brass/20">
             <ul className="space-y-2">
               {education.highlights.map((highlight, index) => (
                 <li 
                   key={index}
-                  className="font-body text-sm text-vintage-cream/70"
+                  className="font-body text-sm text-vintage-warm-cream leading-relaxed"
                 >
                   {highlight}
                 </li>
