@@ -15,6 +15,7 @@
   --color-muted-umber: #5c4033;      /* Mid-brown for secondary labels */
   --color-vintage-brass: #c9a55c;    /* Gold/brass for accents */
   --color-warm-cream: #f5efe6;       /* Slightly warmer cream for detail text */
+  --color-parchment-grey: #A19A91;   /* Parchment grey – detail text on dark cards (4.5:1+ contrast) */
 
   /* Font Variables */
   --font-display: "Playfair Display", serif;

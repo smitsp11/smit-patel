@@ -83,8 +83,8 @@ export const EducationCard = forwardRef<HTMLDivElement, EducationCardProps>(
           {education.field}
         </p>
 
-        {/* Years - Brighter cream for better visibility */}
-        <p className="font-body text-vintage-cream/80 mb-4 tracking-wide">
+        {/* Years - Parchment grey for clear contrast on dark card (4.5:1+) */}
+        <p className="font-body text-vintage-parchment-grey mb-4 tracking-wide">
           {education.startDate ? `${education.startDate} — ${education.endDate}` : education.endDate}
         </p>
 

@@ -21,6 +21,7 @@ const config: Config = {
           "muted-umber": "var(--color-muted-umber)",
           brass: "var(--color-vintage-brass)",
           "warm-cream": "var(--color-warm-cream)",
+          "parchment-grey": "var(--color-parchment-grey)",
         },
       },
       fontFamily: {
