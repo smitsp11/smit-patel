@@ -36,6 +36,7 @@ const jobs: Job[] = [
     endDate: "2026",
     description:
       "Built the 'brain' that allows a formula race car to see the track and drive itself.",
+    highlights: [],
   },
 
   {
@@ -47,6 +48,7 @@ const jobs: Job[] = [
     endDate: "2026",
     description:
       "Engineered the AI infrastructure and recommendation algorithms behind a personalized fashion marketplace for over 1,000 products.",
+    highlights: [],
   },
   
   {
@@ -58,7 +60,8 @@ const jobs: Job[] = [
     endDate: "Present",
     description:
       "Building a global community of builders by removing the pressure of competition and reintroducing passion in creation.",
-  },
+    highlights: [],
+    },
 ];
 
 // Education data
