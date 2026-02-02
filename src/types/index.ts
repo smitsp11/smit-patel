@@ -23,7 +23,7 @@ export interface Job {
   startDate: string;
   endDate: string | "Present";
   description: string;
-  highlights: string[];
+  highlights?: string[];
   logoUrl?: string;
 }
 
