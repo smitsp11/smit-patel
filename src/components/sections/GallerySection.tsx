@@ -16,7 +16,7 @@ if (typeof window !== "undefined") {
 const galleryPhotos: Photo[] = [
   {
     id: "1",
-    src: "/images/IMG_0121.jpg",
+    src: "/images/IMG_0121.JPG",
     alt: "Landscape photography - Mountain vista",
     caption: "Beach Sunset",
     location: "Port Burwell, Canada",
@@ -25,7 +25,7 @@ const galleryPhotos: Photo[] = [
   },
   {
     id: "2",
-    src: "/images/IMG_6976.jpg",
+    src: "/images/IMG_6976.JPG",
     alt: "Street photography - Urban scene",
     caption: "Santorini Stairs",
     location: "Santorini, Greece",
