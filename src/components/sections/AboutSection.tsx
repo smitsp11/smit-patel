@@ -168,7 +168,8 @@ export function AboutSection() {
               <div className="flex flex-wrap gap-2">
                 {[
                   "Python",
-                  "Node.js",
+                  "C++",
+                  "JavaScript",
                   "LLMs",
                   "FastAPI",
                   "PostgreSQL",
