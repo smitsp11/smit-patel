@@ -44,3 +44,7 @@ next-env.d.ts
 
 # OS
 Thumbs.db
+
+# Project docs (private)
+prd.md
+phases.md
