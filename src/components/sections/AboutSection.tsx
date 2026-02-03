@@ -22,7 +22,7 @@ const polaroids = [
   },
   {
     id: 2,
-    src: "/images/creativity.jpg",
+    src: "/images/creativity.JPG",
     alt: "Mountain landscape",
     caption: ".",
     rotation: 5,
