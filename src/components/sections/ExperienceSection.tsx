@@ -23,8 +23,8 @@ const jobs: Job[] = [
     location: "Ottawa, ON",
     startDate: "2026",
     endDate: "Present",
-    description:
-    "Fintech consulting firm to help examining investment opporunities and facilitating financing.",
+    description:    
+    "Engineering a full-stack engine for a consulting firm to examine investement opportunities.",
   },
   
   {
@@ -38,18 +38,6 @@ const jobs: Job[] = [
       "Built the 'brain' that allows a formula race car to see the track and drive itself.",
     highlights: [],
   },
-
-  {
-    id: "3",
-    company: "TailorMate Startup",
-    role: "Founder",
-    location: "Toronto, ON",
-    startDate: "2025",
-    endDate: "2026",
-    description:
-      "Engineered the AI infrastructure and recommendation algorithms behind a personalized fashion marketplace for over 1,000 products.",
-    highlights: [],
-  },
   
   {
     id: "4",
@@ -61,6 +49,18 @@ const jobs: Job[] = [
     description:
       "Building a global community of builders by removing the pressure of competition and reintroducing passion in creation.",
     highlights: [],
+    },
+
+    {
+      id: "3",
+      company: "TailorMate Startup",
+      role: "Founder",
+      location: "Toronto, ON",
+      startDate: "2025",
+      endDate: "2026",
+      description:
+        "Engineered the AI infrastructure and recommendation algorithms behind a personalized fashion marketplace for over 1,000 products.",
+      highlights: [],
     },
 ];
 
