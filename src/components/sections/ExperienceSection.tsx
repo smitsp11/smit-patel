@@ -353,7 +353,7 @@ export function ExperienceSection() {
         {/* Resume Link Box */}
         <div className="mt-8 flex justify-center">
           <a
-            href="https://drive.google.com/file/d/1tYTzsVRaghabD1o-9qSqyDoylij1ZIIY/view?usp=sharing"
+            href="https://drive.google.com/file/d/1JaYckuV54-izReabnMO7jjeLLQAuYDY5/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="
