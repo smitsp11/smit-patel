@@ -58,7 +58,7 @@ const projects: Project[] = [
     featured: true,
     year: 2026,
   },
-  {
+  /*{
     id: "5",
     title: "Finder",
     description:
@@ -77,7 +77,7 @@ const projects: Project[] = [
     imageUrl: "/images/vox.png",
     featured: true,
     year: 2026,
-  },
+  },*/
 ];
 
 /**
