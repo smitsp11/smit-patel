@@ -96,6 +96,9 @@ export default function RootLayout({
             <BackgroundLayer />
             <LensCursor />
             {children}
+            {/* Canadian Webring Widget */}
+            <div data-webring="ca" data-member="smit-patel"></div>
+            <script src="https://webring.ca/embed.js" defer></script>
           </LenisProvider>
         </HeroProvider>
       </body>
