@@ -71,7 +71,7 @@ const education: Education = {
   degree: "Computer Engineering",
   field: "",
   startDate: "",
-  endDate: "Expected Graduation 2029",
+  endDate: "Expected Graduation 2028",
   gpa: "",
   highlights: [
     "Faculty of Applied Science & Engineering Award ($10,000)",
