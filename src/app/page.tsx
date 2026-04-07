@@ -25,6 +25,12 @@ export default function Home() {
       {/* Gallery Section - Phase 6 */}
       <GallerySection />
 
+      {/* Canadian Webring Widget */}
+      <div className="flex justify-center py-8 text-white/50 hover:text-white transition-colors relative z-10">
+        <div data-webring="ca" data-member="smit-patel"></div>
+        <script src="https://webring.ca/embed.js" defer></script>
+      </div>
+
       {/* Contact Section - Phase 7 */}
       <ContactSection />
     </main>
