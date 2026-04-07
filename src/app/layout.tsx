@@ -98,7 +98,7 @@ export default function RootLayout({
             {children}
             {/* Canadian Webring Widget */}
             <div 
-              className="text-white"
+              className="fixed bottom-4 right-4 z-[99] text-white"
               data-webring="ca" 
               data-member="smit-patel"
             ></div>
