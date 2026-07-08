@@ -20,7 +20,7 @@ const socialLinks: SocialLink[] = [
   },
   {
     platform: "linkedin",
-    url: "https://www.linkedin.com/in/smit11patel",
+    url: "https://www.linkedin.com/in/_smitsp11",
     label: "LinkedIn",
   },
   {
