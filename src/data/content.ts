@@ -8,7 +8,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     platform: "twitter",
-    url: "https://x.com/smitspatel11",
+    url: "https://x.com/_smitsp11",
     label: "X",
   },
 ];
